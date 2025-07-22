@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-const allowedOrigins = "http://localhost:5173"
-// const allowedOrigins = "https://jobjunction-samad.netlify.app"
+// const allowedOrigins = "http://localhost:5173"
+const allowedOrigins = "https://jobjunction-samad05imam.netlify.app"
 
 const corsOptions = {
   origin: function (origin, callback) {

@@ -18,21 +18,24 @@ app.use(cookieParser());
 
 
 // const allowedOrigins = "http://localhost:5173"
-const allowedOrigins = "https://jobjunction-samad05imam.netlify.app"
+// const allowedOrigins = "https://jobjunction-samad05imam.netlify.app"
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    // allow requests with no origin (like mobile apps or curl)
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     // allow requests with no origin (like mobile apps or curl)
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: ["http://localhost:3000", "https://your-netlify-url.netlify.app"],
+  credentials: true, // Important!
+}));
 
 // Routes
 app.get("/" , (req , res)=>{

@@ -33,7 +33,7 @@ app.use(cookieParser());
 // };
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://your-netlify-url.netlify.app"],
+  origin: ["http://localhost:3000", "https://jobjunction-samad05imam.netlify.app"],
   credentials: true, // Important!
 }));
 
